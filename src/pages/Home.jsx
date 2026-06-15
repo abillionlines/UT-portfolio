@@ -103,7 +103,7 @@ export default function Home() {
               are upon. My experience with formal and non-formal education is
               vast, as well as more than a decade of experience running my own
               business. I've decided it's time for me to take a step back and
-              re-align with how energing technologies are changing the world; I
+              re-align with how emerging technologies are changing the world; I
               see Utah Tech as a perfect place for this kind of focus.
             </p>
           </div>
