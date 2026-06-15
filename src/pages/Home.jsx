@@ -94,7 +94,7 @@ export default function Home() {
               className="about-text"
               style={{ maxWidth: 760, fontSize: "1.21rem" }}
             >
-              I am a 43 year old meta-conitive that has spent the last 30 years
+              I am a 43 year old meta-cognitive that has spent the last 30 years
               of my life perfecting a craft that lives at the intersection of
               technical and creative. I've logged well over 10,000 hours as a
               guitarist/singer, and well over 10,000 hours as a Audio Engineer
