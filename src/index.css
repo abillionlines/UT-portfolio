@@ -1,0 +1,485 @@
+/* =============================================
+   GLOBAL DARK THEME – Brian Wilkinson Portfolio
+   ============================================= */
+
+:root {
+  --bg-primary: #111111;
+  --bg-secondary: #1a1a1a;
+  --bg-card: #2a2a2a;
+  --bg-card-hover: #333333;
+  --accent: #4a7c59;
+  --accent-light: #5c9a6e;
+  --accent-muted: rgba(74, 124, 89, 0.15);
+  --text-primary: #f0f0f0;
+  --text-secondary: #aaaaaa;
+  --text-muted: #777777;
+  --border-color: #3a3a3a;
+  --border-accent: rgba(74, 124, 89, 0.4);
+  --heading-font: "DM Sans", system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--heading-font);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* ---- Navbar ---- */
+.navbar-custom {
+  background-color: var(--bg-secondary) !important;
+  border-bottom: 1px solid var(--border-color);
+  padding: 0.75rem 2rem;
+}
+.navbar-custom .navbar-brand {
+  color: var(--text-primary) !important;
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: 0.04em;
+}
+.navbar-custom .nav-link {
+  color: var(--text-secondary) !important;
+  transition: color 0.2s;
+}
+.navbar-custom .nav-link:hover {
+  color: var(--accent-light) !important;
+}
+.navbar-toggler {
+  border-color: var(--border-color) !important;
+}
+.navbar-toggler-icon {
+  filter: invert(0.8);
+}
+
+/* ---- Hero ---- */
+.hero-section {
+  background-color: var(--bg-primary);
+  min-height: 88vh;
+  display: flex;
+  align-items: center;
+  padding: 3rem 0;
+}
+.hero-card {
+  background-color: #242424;
+  border-radius: 16px;
+  padding: 3rem 2.5rem;
+  width: 100%;
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.4);
+}
+.hero-greeting {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.02em;
+}
+.hero-name {
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  font-weight: 800;
+  color: var(--accent-light);
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  letter-spacing: 0.06em;
+}
+.hero-subtitle {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  max-width: 480px;
+  margin-bottom: 1.8rem;
+}
+.hero-btn {
+  background-color: var(--accent) !important;
+  border-color: var(--accent) !important;
+  color: #fff !important;
+  padding: 0.6rem 1.6rem;
+  font-weight: 600;
+  border-radius: 4px;
+  transition:
+    background-color 0.2s,
+    transform 0.15s;
+}
+.hero-btn:hover {
+  background-color: var(--accent-light) !important;
+  border-color: var(--accent-light) !important;
+  transform: translateY(-1px);
+}
+.hero-image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-avatar {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--accent);
+  box-shadow: 0 0 40px rgba(74, 124, 89, 0.3);
+}
+
+/* ---- Section titles ---- */
+.section-label {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 0.25rem;
+}
+.section-title-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+.section-title-bar::before {
+  content: "";
+  display: block;
+  width: 4px;
+  align-self: stretch;
+  background-color: var(--accent);
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+.section-title-bar h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+/* ---- About section ---- */
+.about-section {
+  background-color: var(--bg-primary);
+  padding: 4rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+.about-stat-number {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--accent-light);
+  line-height: 1;
+}
+.about-stat-plus {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+.about-text {
+  color: var(--text-secondary);
+  font-size: 0.97rem;
+  line-height: 1.75;
+}
+
+/* ---- Skills / Landing Cards ---- */
+.skills-section {
+  background-color: var(--bg-secondary);
+  padding: 4rem 0;
+}
+.skill-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  height: 100%;
+  transition:
+    border-color 0.25s,
+    transform 0.2s,
+    box-shadow 0.2s;
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+  color: inherit;
+}
+.skill-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(74, 124, 89, 0.2);
+  text-decoration: none;
+  color: inherit;
+}
+.skill-card-icon {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  margin-bottom: 1.2rem;
+  opacity: 0.85;
+}
+.skill-card-title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent-light);
+  margin-bottom: 0.75rem;
+}
+.skill-card-body {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* ---- Page layout (inner pages) ---- */
+.page-wrapper {
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  padding-bottom: 4rem;
+}
+.page-hero {
+  background-color: var(--bg-secondary);
+  padding: 3.5rem 0 2.5rem;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 3rem;
+}
+.page-hero h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+.page-description {
+  color: var(--text-secondary);
+  font-size: 0.97rem;
+  line-height: 1.75;
+  max-width: 780px;
+}
+
+/* ---- Back button ---- */
+.back-btn {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  padding: 0.4rem 1rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition:
+    border-color 0.2s,
+    color 0.2s;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 1.5rem;
+}
+.back-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent-light);
+  text-decoration: none;
+}
+
+/* ---- Transcript cards ---- */
+.transcript-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+.transcript-card:hover {
+  border-color: var(--border-accent);
+  box-shadow: 0 6px 24px rgba(74, 124, 89, 0.15);
+}
+.transcript-card-body {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.transcript-card-icon {
+  width: 36px;
+  height: 36px;
+  margin-bottom: 0;
+  opacity: 0.7;
+}
+.transcript-card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: auto;
+  padding-bottom: 1.2rem;
+}
+.transcript-card-footer {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  gap: 0.75rem;
+}
+.btn-view {
+  background-color: var(--accent) !important;
+  border-color: var(--accent) !important;
+  color: #fff !important;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.4rem 1.1rem;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+.btn-view:hover {
+  background-color: var(--accent-light) !important;
+  border-color: var(--accent-light) !important;
+}
+.btn-outline-accent {
+  background: transparent !important;
+  border: 1px solid var(--accent) !important;
+  color: var(--accent-light) !important;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.4rem 1.1rem;
+  border-radius: 4px;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+}
+.btn-outline-accent:hover {
+  background-color: var(--accent-muted) !important;
+}
+
+/* ---- Web Dev project cards ---- */
+.project-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+.project-card:hover {
+  border-color: var(--border-accent);
+  box-shadow: 0 6px 24px rgba(74, 124, 89, 0.15);
+}
+.project-card-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-secondary);
+  padding: 1rem 1.2rem 0.5rem;
+}
+.project-card-img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  display: block;
+}
+.project-card-footer {
+  padding: 0.85rem 1.2rem;
+  border-top: 1px solid var(--border-color);
+  margin-top: auto;
+}
+
+/* ---- Music cards ---- */
+.music-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+.music-card:hover {
+  border-color: var(--border-accent);
+  box-shadow: 0 6px 24px rgba(74, 124, 89, 0.15);
+}
+.music-card-img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  display: block;
+}
+.music-card-body {
+  padding: 1.4rem 1.4rem 0.5rem;
+  flex: 1;
+}
+.music-card-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.6rem;
+}
+.music-card-desc {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  line-height: 1.65;
+}
+.music-card-footer {
+  padding: 0.85rem 1.4rem;
+  border-top: 1px solid var(--border-color);
+}
+
+/* ---- Modal dark ---- */
+.modal-dark .modal-content {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+}
+.modal-dark .modal-header {
+  border-bottom: 1px solid var(--border-color);
+}
+.modal-dark .modal-title {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+.modal-dark .btn-close {
+  filter: invert(1);
+}
+.modal-dark .modal-footer {
+  border-top: 1px solid var(--border-color);
+}
+.modal-dark video {
+  width: 100%;
+  border-radius: 6px;
+  background: #000;
+}
+
+/* ---- Audio player ---- */
+.audio-track {
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 0.9rem 1rem;
+  margin-bottom: 0.75rem;
+  transition: border-color 0.2s;
+}
+.audio-track:hover {
+  border-color: var(--border-accent);
+}
+.audio-track-title {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ---- Footer ---- */
+.footer-bar {
+  background-color: var(--bg-secondary);
+  border-top: 1px solid var(--border-color);
+  padding: 1.5rem 0;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin-top: 4rem;
+}
