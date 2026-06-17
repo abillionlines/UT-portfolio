@@ -67,7 +67,7 @@ export default function Home() {
               }}
             >
               <img
-                src="/assets/headshot.jpeg"
+                src="/assets/headshot-linkedin.jpg"
                 alt="Brian Wilkinson"
                 style={{
                   width: 490,
@@ -76,6 +76,9 @@ export default function Home() {
                   objectFit: "cover",
                   border: "3px solid var(--accent)",
                   boxShadow: "0 0 40px rgba(74,124,89,0.25)",
+                  transform: "translateZ(0)",
+                  WebkitTransform: "translateZ(0)",
+                  imageRendering: "-webkit-optimize-contrast",
                 }}
               />
             </div>
